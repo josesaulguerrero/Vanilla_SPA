@@ -1,6 +1,5 @@
 import '@styles/styles.css';
+import router from '@routes/index';
 
-const x = () => {
-   console.log('holaaa')
-}
-x()
+window.addEventListener('load', router)
+window.addEventListener('hashchange', router);
