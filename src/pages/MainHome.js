@@ -8,7 +8,7 @@ const MainHome = async () => {
          ${characters.results.map((character) => {
             return (
                `
-               <a href="/Character">
+               <a href="/#/${character.id}">
                   <article class="card">
                      <img src="${character.image}" alt="${character.name}"/>
                      <h3>${character.name}</h3>

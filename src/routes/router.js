@@ -8,12 +8,16 @@ class router {
 
    async initRouter() {
       const { location: { pathname = "/" } } = window;
-      const page = pathname === "/" ? "Home" : pathname.replace("/", "");
+      const page = pathname === /\/?#\/\d{1,3}\/?/ ? "/character" : pathname || '/home';
       await this.load(page);
-      console.log(page)
+      // console.log(page)
    }
 
-   async load(page = 'Home') {
+   // async validUrl() {
+
+   // }
+
+   async load(page = '/home') {
       const { paths } = this;
       const { path, template } = await paths[page] || paths.ErrorNotFound;
       console.log(path, template)
