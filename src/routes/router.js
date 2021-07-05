@@ -6,15 +6,17 @@ class router {
       this.initRouter();
    }
 
-   initRouter() {
+   async initRouter() {
       const { location: { pathname = "/" } } = window;
       const page = pathname === "/" ? "Home" : pathname.replace("/", "");
-      this.load(page);
+      await this.load(page);
+      console.log(page)
    }
 
    async load(page = 'Home') {
       const { paths } = this;
-      const { path, template } = paths[page] || paths.ErrorNotFound;
+      const { path, template } = await paths[page] || paths.ErrorNotFound;
+      console.log(path, template)
       const headerContent = document.querySelector('#header');
       headerContent.innerHTML = await header();
       const content = document.querySelector("#content");

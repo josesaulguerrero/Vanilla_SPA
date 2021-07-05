@@ -8,7 +8,7 @@ const MainHome = async () => {
          ${characters.results.map((character) => {
             return (
                `
-               <a href="/#/${character.id}">
+               <a href="/Character">
                   <article class="card">
                      <img src="${character.image}" alt="${character.name}"/>
                      <h3>${character.name}</h3>
@@ -20,7 +20,7 @@ const MainHome = async () => {
          }).join('')}
       </div>
    `;
-   console.log(view)
+   // console.log(view)
 
    return view;
 }
