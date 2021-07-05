@@ -7,17 +7,21 @@ class router {
    }
 
    async initRouter() {
-      const { location: { pathname = "/" } } = window;
-      const page = pathname === /\/?#\/\d{1,3}\/?/ ? "/character" : pathname || '/home';
-      await this.load(page);
-      // console.log(page)
+      const hash = location.hash.replace(/#\/(\d{1,3})\/?/, "$1").toLocaleLowerCase() || '/';
+      const page = await this.ResolveRoutes(hash);
+      await this.render(page);
+      console.log(page)
+   }
+   
+   ResolveRoutes = (route) => {
+      if(route.length <= 3) {
+         let validRoute = route === '/' ? route : '/character';
+         return validRoute;
+      }
+      return route;
    }
 
-   // async validUrl() {
-
-   // }
-
-   async load(page = '/home') {
+   async render(page = '/') {
       const { paths } = this;
       const { path, template } = await paths[page] || paths.ErrorNotFound;
       console.log(path, template)

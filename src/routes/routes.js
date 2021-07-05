@@ -3,7 +3,7 @@ import ErrorNotFound from '@pages/ErrorNotFound';
 import Character from '@pages/character';
 
 const routes = {
-   "/home": {
+   "/": {
       path: '/',
       template: MainHome(),
    },
