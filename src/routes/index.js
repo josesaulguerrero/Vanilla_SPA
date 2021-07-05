@@ -1,24 +1,6 @@
-import Header from '@templates/Header';
-import MainHome from '@pages/MainHome';
-import Character from '@pages/Character';
-import ErrorNotFound from '@pages/ErrorNotFound';
-import GetHash from '@utils/GetHash';
-import ResolveRoutes from '@utils/ResolveRoutes';
+import router from '@routes/router';
+import routes from '@routes/routes';
 
-const routes = {
-   '/': MainHome,
-   '/:id': Character,
-   '/contact': 'Contact',
-}
+const MainRouter = new router(routes);
 
-const router = async () => {
-   const header = null || document.getElementById('header');
-   const content = null || document.getElementById('content');
-   header.innerHTML = await Header();
-   let hash = GetHash();
-   let route = await ResolveRoutes(hash);
-   let render = routes[route] ? routes[route] : ErrorNotFound;
-   content.innerHTML = await render();
-} 
-
-export default router;
+export default MainRouter;

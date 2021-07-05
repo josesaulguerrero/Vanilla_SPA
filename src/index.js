@@ -1,5 +1,5 @@
 import '@styles/styles.css';
-import router from '@routes/index';
+import MainRouter from '@routes/index';
 
-window.addEventListener('load', router)
-window.addEventListener('hashchange', router);
+window.addEventListener('load', MainRouter)
+window.addEventListener('hashchange', MainRouter);
