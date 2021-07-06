@@ -4,7 +4,7 @@ import Character from '@pages/character';
 
 const routes = {
    "/": {
-      path: '/',
+      path: '/home',
       template: MainHome(),
    },
    "/errornotfound": {
@@ -13,7 +13,7 @@ const routes = {
    },
    "/character": {
       // path: `${/\/Character[1-9]{1,3}/}`,
-      path: `/Character`,
+      path: location.pathname + location.hash,
       template: Character(),
    },
    "/about": {
