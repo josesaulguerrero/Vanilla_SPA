@@ -3,12 +3,12 @@ import ErrorNotFound from '@pages/ErrorNotFound';
 import Character from '@pages/Character';
 
 const routes = {
-   "/": {
+   "/home": {
       path: '/home',
       template: MainHome(),
    },
    "/errornotfound": {
-      path: '/404',
+      path: location.pathname,
       template: ErrorNotFound(),
    },
    "/character": {

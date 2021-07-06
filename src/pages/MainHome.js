@@ -1,16 +1,16 @@
 import GetData from '@utils/GetData';
 
 const MainHome = async () => {
-   const characters = await GetData();
+   const characters = await GetData(null);
    const view =  `
       <div class="characters">
-         ${characters.results.map((character) => {
+         ${characters.results.map((char) => {
             return (
                `
-               <a class="card" href="/character#${character.id}">
+               <a class="card" href="/character#${char.id}">
                   <article class="card-content">
-                     <img class="card-image" src="${character.image}" alt="${character.name}"/>
-                     <h3 class="card-characterName">${character.name}</h3>
+                     <img class="card-image" src="${char.image}" alt="${char.name}"/>
+                     <h3 class="card-characterName">${char.name}</h3>
                   </article>
                </a>
                `

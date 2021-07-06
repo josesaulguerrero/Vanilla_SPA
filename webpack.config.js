@@ -19,6 +19,7 @@ module.exports = {
          '@templates': path.resolve(__dirname, 'src/templates'),
       }
    },
+   devtool: 'source-map',
    module: {
       rules: [
          {
