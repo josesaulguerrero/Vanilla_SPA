@@ -35,6 +35,13 @@ module.exports = {
                'css-loader',
             ]
          },
+         {
+            test: /\.(woff|woff2)$/,
+            type: 'asset/resource',
+            generator: {
+               filename: './assets/fonts/[name][contenthash][ext]',
+            },
+         },
       ]
    },
    plugins: [

@@ -12,7 +12,6 @@ const routes = {
       template: ErrorNotFound(),
    },
    "/character": {
-      // path: `${/\/Character[1-9]{1,3}/}`,
       path: location.pathname + location.hash,
       template: Character(),
    },

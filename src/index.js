@@ -1,9 +1,5 @@
 import '@styles/styles.css';
-import MainRouter from '@routes/index';
-// import Character from '@pages/Character';
-// import PreviousPage from '@utils/PreviousPage';
+import MainRouter from '@routes/router';
 
 window.addEventListener('load', MainRouter)
 window.addEventListener('hashchange', MainRouter);
-
-// Character.addEventListener('onload')
