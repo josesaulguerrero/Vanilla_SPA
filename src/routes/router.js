@@ -14,10 +14,14 @@ class router {
          case "/home":
             this.render("/home");
             break;
-         case "/about": 
+         case "/about":
+         case "about": 
+         case "about/": 
             this.render("/about");
             break;
-         case "/character": 
+         case "/character":
+         case "character":
+         case "character/":
             this.render("/character");
             break;
          default: 
