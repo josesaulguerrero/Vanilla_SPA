@@ -26,7 +26,7 @@ class router {
       }
    }
 
-   async render(page = '/') {
+   async render(page = '/home') {
       const { template } = await this.paths[page] || this.paths.errornotfound;
       const headerContent = document.querySelector('#header');
       headerContent.innerHTML = await header();

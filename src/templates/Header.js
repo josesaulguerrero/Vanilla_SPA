@@ -2,7 +2,7 @@ const Header = () => {
    const view = `
    <div class="header-main">
       <div class="header-logo"> 
-      <a class="logo-anchor" href="/">
+      <a class="logo-anchor" href="/home">
          <img class="logo" src="https://image.flaticon.com/icons/png/512/763/763780.png" alt="the page logo"/>
          <h1>
             100tifi.co

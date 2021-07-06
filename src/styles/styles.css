@@ -175,6 +175,7 @@ body a {
    color: var(--main-color);
    border-radius: 5px;
    font-weight: bold;
+   cursor: pointer;
 }
 
 .character {
