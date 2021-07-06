@@ -1,6 +1,6 @@
 import MainHome from '@pages/MainHome';
 import ErrorNotFound from '@pages/ErrorNotFound';
-import Character from '@pages/character';
+import Character from '@pages/Character';
 
 const routes = {
    "/": {
