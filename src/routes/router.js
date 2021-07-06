@@ -7,7 +7,8 @@ class router {
    }
 
    async initRouter() {
-      const { pathname = "/" } = window.location;
+      const pathname = window.location.href.replace(/https?\:\/\/.*\/(\w{0,})?(#\d{0,3})?/, "/$1") || "/home";
+      console.log(pathname)
       switch(pathname) {
          case "/": 
          case "/home":
@@ -26,7 +27,7 @@ class router {
    }
 
    async render(page = '/') {
-      const { path = "/", template } = await this.paths[page] || this.paths.errornotfound;
+      const { template } = await this.paths[page] || this.paths.errornotfound;
       const headerContent = document.querySelector('#header');
       headerContent.innerHTML = await header();
       const content = document.querySelector("#content");
