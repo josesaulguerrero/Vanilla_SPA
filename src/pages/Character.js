@@ -5,16 +5,16 @@ const Character = async () => {
    const characterData = await GetData(id);
    const view = `
       <article class="more-info">
-         <button id="backButton" class="backButton">bacgdfk</button>
+         <button id="backButton" class="backButton">Go back</button>
          <article class="character">
             <section class="character-img">
                <img src="${characterData.image}" alt="${characterData.name}"/>
             </section>
             <section class="character-info">
                <h2>${characterData.name}</h2>
-               <h3>Status: ${characterData.status}</h3>
-               <h3>gender: ${characterData.gender}</h3>
-               <h3>Origin place: ${characterData.origin.name}</h3>
+               <h3>Status: <span>${characterData.status}</span></h3>
+               <h3>gender: <span>${characterData.gender}</span></h3>
+               <h3>Origin place: <span>${characterData.origin.name}</span></h3>
             </section>
          </article>
       </article>
