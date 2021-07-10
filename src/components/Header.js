@@ -1,5 +1,5 @@
-import { NavBar } from "@components/NavBar";
-import { Title } from "@components/SiteTitle";
+import { NavBar } from "./NavBar.js";
+import { Title } from "./SiteTitle.js";
 
 export function Header() {
    const $header = document.createElement('header');

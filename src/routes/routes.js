@@ -1,19 +1,24 @@
-import MainHome from '@pages/MainHome';
-import ErrorNotFound from '@pages/ErrorNotFound';
-import Character from '@pages/Character';
+import { Home } from "../components/Home.js";
+import { About } from "../components/About.js";
+import { Search } from "../components/Search.js";
+import { ErrorNotFound } from "../components/404.js";
+import { CharacterDetails } from "../components/CharacterDetails.js";
 
 const routes = {
-   "/home": {
-      template: MainHome(),
+   "#/home": {
+      template: Home(),
    },
-   "/errornotfound": {
+   "#/search": {
+      template: Search(),
+   },
+   "#/404": {
       template: ErrorNotFound(),
    },
-   "/character": {
-      template: Character(),
+   "#/character": {
+      template: CharacterDetails(),
    },
-   "/about": {
-      template: `<h2>holaa</h2>`
+   "#/about": {
+      template: About(),
    }
 }
 
