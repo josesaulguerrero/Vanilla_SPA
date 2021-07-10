@@ -170,6 +170,7 @@ a:hover {
 }
 
 .card {
+   width: 90%;
    max-width: 90%;
    height: 90%;
    display: flex;
