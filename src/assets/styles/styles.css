@@ -1,3 +1,21 @@
+@font-face {
+   font-family: 'Montserrat';
+   src: 
+      url('../fonts/montserrat-v15-latin-regular.woff') format('woff')
+      url('../fonts/montserrat-v15-latin-100.woff') format('woff')
+      url('../fonts/montserrat-v15-latin-200.woff') format('woff')
+      url('../fonts/montserrat-v15-latin-300.woff') format('woff')
+      url('../fonts/montserrat-v15-latin-500.woff') format('woff')
+      url('../fonts/montserrat-v15-latin-600.woff') format('woff')
+      url('../fonts/montserrat-v15-latin-700.woff') format('woff')
+      url('../fonts/montserrat-v15-latin-800.woff') format('woff')
+      url('../fonts/montserrat-v15-latin-900.woff') format('woff')
+   ;
+   font-weight: 500;
+   font-style: normal;
+}
+
+
 html {
    box-sizing: border-box;
    /* overflow-x: hidden; */
@@ -24,7 +42,8 @@ body {
    max-width: 100%;
    /* padding-bottom: 50px; */
    font-size: 1.8rem;
-   font-family: sans-serif;
+   font-weight: 500;
+   font-family: 'Montserrat', sans-serif;
    background-color: var(--BackgroundColor);
    overflow-x: hidden;
    /* overflow-y: scroll; */
@@ -66,7 +85,7 @@ a:hover {
 }
 
 .header__image {
-   width: 100%;
+   width: 90%;
    max-width: 200px;
 } 
 
@@ -84,6 +103,8 @@ a:hover {
 
 .nav-link {
    width: 100px;
+   display: flex;
+   align-items: center;
    font-size: 2.6rem;
    list-style: none;
    transition: all .1s ease-in-out;
@@ -109,15 +130,15 @@ a:hover {
 
 
 .main {
-   /* animation: FadeIn .6s forwards ease-in-out; */
+   animation: FadeIn .6s forwards ease-in-out;
    max-height: fit-content;
 }
 
 .loader {
    width: 100px;
    height: 100px;
-   border: rgb(193, 193, 233) 5px solid;
-   border-left: rgb(175, 137, 235) 5px solid;
+   border: rgb(136, 136, 230) 5px solid;
+   border-left: rgb(67, 33, 122) 5px solid;
    margin: 0 auto 50px;
    border-radius: 50%;
    animation: Rotate .7s forwards ease-in-out infinite;
@@ -125,6 +146,7 @@ a:hover {
 
 .loader--hidden {
    opacity: 0;
+   display: none;
    animation: none;
 }
 
@@ -134,7 +156,7 @@ a:hover {
 
 /* home */
 
-.home {
+.home, .results {
    /* width: 100%; */
    max-width: 100%;
    height: auto;
@@ -159,7 +181,7 @@ a:hover {
    background-color: var(--CardBC);
    border-radius: 10px;
    box-shadow: 7px 10px 15px var(--HeaderBC);
-   /* animation: Rotation 1s forwards ease-in-out; */
+   animation: FadeIn 1s forwards ease-in-out;
 }
 
 .card .image img {
@@ -175,6 +197,7 @@ a:hover {
 }
 
 .content h2 {
+   max-width: 75%;
    white-space: nowrap;
    overflow-x: hidden;
    text-overflow: ellipsis;
@@ -206,14 +229,120 @@ a:hover {
 
 .details {
    max-height: fit-content;
+   max-width: 100%;
+   padding: 20px 15px;
+}
+
+.back_button {
+   width: 130px;
+   height: 40px;
+   border: none;
+   border-radius: 20px;
+   margin: 0 0 30px;
+   font-size: 1.8rem;
+   background-color: var(--ButtonBC);
+}
+
+.card--detailed {
+   /* width: 100%; */
+   /* max-width: auto; */
+   width: auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   margin: 0 auto;
+   padding: 20px;
+   background-color: var(--CardBC);
+   border-radius: 25px;
+   box-shadow: 5px 5px 10px var(--HeaderBC);
+   color: var(--CardColor);
+   animation: FadeIn 1s forwards ease-in-out;
+}
+
+.details .image {
+   min-width: 100%;
+   max-width: 100%;
+   display: flex;
+   justify-content: center;
+   margin: 0 20px 20px 0 ;
+}
+
+.details .image img {
+   max-width: 100%;
+   margin: 0 auto;
+   border-radius: 10px;
+}
+
+.details .content h2 {
+   margin-bottom: 15px;
+   white-space: pre-wrap;
+}
+
+.details .content h4 {
+   margin: 7px 0;
+   white-space: pre-wrap;
+   font-size: 1.9rem;
 }
 
 /* detailed info */
 
 
+/* search section */
+
+.form-section {
+   width: 100%;
+   max-width: 680px;
+   align-items: center;
+   padding: 30px 0;
+   margin: 0 auto;
+}
+
+.form-section form {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+input[type="search"] {
+   width: 75%;
+   height: 40px;
+   border: none;
+   border-radius: 25px;
+   padding: 5px 15px;
+   outline: none;
+   font-size: 2rem;
+   /* max-width: 550px; */
+   transition: box-shadow .2s;
+}
+
+input[type="search"]:focus {
+   box-shadow: 2px 3px 5px var(--HeaderBC);
+}
+
+input[type="submit"] {
+   width: 130px;
+   height: 40px;
+   border: none;
+   background-color: var(--ButtonBC);
+   border-radius: 25px;
+}
+
+
+.dataend h2 {
+   text-align: center;
+   padding: 0px 0 3rem;
+   font-size: 3rem;
+}
+
+/* search section */
+
+
 /* media queries */
 
-@media(min-width: 530px) {
+
+
+@media(min-width: 560px) {
 
    .header {
       justify-content: space-between;
@@ -222,10 +351,23 @@ a:hover {
 
    .nav-links__container {
       height: 100%;
+      /* align-items: center; */
    }
 
    .nav-link:hover {
       background-color: var(--BackgroundColor);
+   }
+}
+
+@media(min-width: 510px) {
+   .card--detailed {
+      flex-wrap: nowrap;
+      max-width: fit-content;
+   }
+
+   .details .image {
+      min-width: auto;
+      margin-bottom: 0;
    }
 }
 
@@ -241,17 +383,11 @@ a:hover {
 @keyframes FadeIn {
    0% {
       opacity: 0;
-      transform: translateY(-500px);
-   }
-   50%{
-      transform: translateY(0px);
-   }
-   70%{
-      transform: translateY(-100px);
+      /* transform: translateY(-500px); */
    }
    100% {
       opacity: 1;
-      transform: translateY(0px);
+      /* transform: translateY(0px); */
    }
 }
 

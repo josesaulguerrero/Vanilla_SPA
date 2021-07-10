@@ -2,7 +2,7 @@ export function Character(data) {
    // const $character = document.createElement('article');
    // $character.id = 'character';
    // $character.classList.add('character');
-   const DefaultImage = "http://assets.stickpng.com/thumbs/58f37731a4fa116215a92411.png"
+   const DefaultImage = "http://assets.stickpng.com/thumbs/58f37731a4fa116215a92411.png";
 
    return `
       <article class="card" id="${data.id}" >

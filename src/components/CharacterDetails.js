@@ -12,17 +12,19 @@ export async function CharacterDetails() {
    let response = await GetData(`${API.CHARACTER}${id}`);
    console.log(response)
    let data = `
-      <section class="image" >
-         <img src="${response.image}" alt="${response.name}" /> 
-      </section>
-      <section class="content" >
-         <h2>Name: ${response.name}</h2>
-         <h4>Status: ${response.status}</h4>
-         <h4>Specie: ${response.species}</h4>
-         <h4>Gender: ${response.gender}</h4>
-         <h4>Origin place: ${response.origin.name}</h4>
-         <h4>Current location: ${response.location.name}</h4>
-      </section>
+      <article class="card--detailed" >
+         <section class="image" >
+            <img src="${response.image}" alt="${response.name}" /> 
+         </section>
+         <section class="content" >
+            <h2>Name: ${response.name}</h2>
+            <h4>Status: ${response.status}</h4>
+            <h4>Specie: ${response.species}</h4>
+            <h4>Gender: ${response.gender}</h4>
+            <h4>Origin place: ${response.origin.name}</h4>
+            <h4>Current place: ${response.location.name}</h4>
+         </section>
+      </article>
    `;
    
    $details.classList.add("details");
