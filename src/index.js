@@ -1,5 +1,6 @@
 import '@styles/styles.css';
-import MainRouter from '@routes/router';
+import { App } from '@src/App';
+// import MainRouter from '@routes/router';
 
-window.addEventListener('load', MainRouter)
-window.addEventListener('hashchange', MainRouter);
+window.addEventListener('DOMContentLoaded', App);
+window.addEventListener('hashchange', App);

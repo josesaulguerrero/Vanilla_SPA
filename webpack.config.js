@@ -12,11 +12,12 @@ module.exports = {
    resolve: {
       extensions: ['.js'],
       alias: {
-         '@styles': path.resolve(__dirname, 'src/styles'),
+         '@src': path.resolve(__dirname, 'src'),
+         '@styles': path.resolve(__dirname, 'src/assets/styles'),
          '@pages': path.resolve(__dirname, 'src/pages'),
          '@routes': path.resolve(__dirname, 'src/routes'),
          '@utils': path.resolve(__dirname, 'src/utils'),
-         '@templates': path.resolve(__dirname, 'src/templates'),
+         '@components': path.resolve(__dirname, 'src/components'),
       }
    },
    devtool: 'source-map',
@@ -58,7 +59,7 @@ module.exports = {
    devServer: {
       contentBase: path.join(__dirname, 'dist'),
       historyApiFallback: true,
-      port: 3006,
+      port: 3005,
       open: true,
       compress: true,
    }
