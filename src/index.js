@@ -1,4 +1,4 @@
-// import '@styles/styles.css';
+import '@styles/styles.css';
 import { App } from './App.js';
 import { SearchData } from './components/SearchData.js';
 import { InfiniteScroll } from './utils/infinite_scroll.js';
