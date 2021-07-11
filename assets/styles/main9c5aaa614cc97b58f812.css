@@ -49,6 +49,14 @@ body {
    /* overflow-y: scroll; */
 }
 
+button {
+   transition: all .2s ease-in-out;
+}
+
+button:active {
+   transform: scale(.8);
+}
+
 a {
    text-decoration: none;
    cursor: pointer;
@@ -236,11 +244,11 @@ a:hover {
 
 .back_button {
    width: 130px;
-   height: 40px;
+   height: 50px;
    border: none;
-   border-radius: 20px;
+   border-radius: 30px;
    margin: 0 0 30px;
-   font-size: 1.8rem;
+   font-size: 2rem;
    background-color: var(--ButtonBC);
 }
 
@@ -306,13 +314,14 @@ a:hover {
 }
 
 input[type="search"] {
-   width: 75%;
-   height: 40px;
+   width: 70%;
+   height: 50px;
    border: none;
    border-radius: 25px;
    padding: 5px 15px;
    outline: none;
    font-size: 2rem;
+   text-align: start;
    /* max-width: 550px; */
    transition: box-shadow .2s;
 }
@@ -322,11 +331,12 @@ input[type="search"]:focus {
 }
 
 input[type="submit"] {
-   width: 130px;
-   height: 40px;
+   width: 110px;
+   height: 50px;
    border: none;
+   font-size: 2rem;
    background-color: var(--ButtonBC);
-   border-radius: 25px;
+   border-radius: 30px;
 }
 
 
@@ -422,4 +432,4 @@ input[type="submit"] {
    }
 }
 
-/*# sourceMappingURL=main2f035dbff208bdddfe53.css.map*/
+/*# sourceMappingURL=main9c5aaa614cc97b58f812.css.map*/
